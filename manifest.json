@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Wally Element Picker",
+    "version": "0.1.5",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "js": ["content-script.js", "utils/xpath-generator.js"],
+        "matches": ["https://*/*"]
+      }
+    ],
+    "externally_connectable":{
+      "matches": ["http://localhost:3000/*"]
+    },
+    "icons": {
+      "16": "images/wallyicon.png",
+      "48": "images/wallyicon.png",
+      "128": "images/wallyicon.png"
+    }
+  }
+  
